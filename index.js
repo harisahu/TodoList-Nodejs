@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // set up the middleware
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:false}));
 
 // set up the static files
 app.use(express.static('assets'));
