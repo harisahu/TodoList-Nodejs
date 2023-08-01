@@ -44,6 +44,7 @@ app.post('/register', (req, res) => {
     .catch(err => {
         console.log("Error Creating user!!", err);
         res.status(500).send("Error Creating user!!");
+        //500 status code indicates Internal Server Error
     });
 });
 
@@ -67,7 +68,7 @@ app.post('/addtask', function(req,res){
     });
 });
 
-// complate the task to the database
+// complete the task to the database
 app.get('/complete-task', function(req,res){
     let id = req.query.id;
     Dashboard.findByIdAndUpdate(id, {completed: true})
