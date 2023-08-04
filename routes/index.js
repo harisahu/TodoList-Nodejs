@@ -14,5 +14,8 @@ router.get('/dashboard', dashboardController.dashboard)
 router.get('/register', registerController.register);
 router.get('/alltask', alltaskController.alltask);
 router.get('/completedtask', completedtaskController.completedtask);
+//login route
+router.get('/login', authController.showLoginForm);
+router.post('/login', authController.login);
 
 module.exports = router;
