@@ -30,8 +30,13 @@ async function authenticateUser(username, password) {
   return null;
 }
 
+//bug
+function dfbgh(){}
 
 // Controller functions...
+
+
+
 module.exports = {
     // ...Other functions
     authenticateUser,
